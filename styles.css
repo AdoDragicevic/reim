@@ -1,0 +1,145 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: 100;
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.a-reset {
+  text-decoration: none;
+  color: inherit;
+}
+
+.scroll-snap-parent {
+  overflow: hidden;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  width: 100vw;
+  scroll-behavior: smooth;
+}
+
+.scroll-snap-child {
+  scroll-snap-align: start;
+}
+
+.section {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding-left: 4rem;
+  color: #F0F2EF;
+  border-bottom: 1px solid rgba(240, 242, 239, .4); 
+}
+
+.section__right {
+  opacity: .8;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  max-width: 60%;
+  margin-left: auto;
+  transition: all .4s ease;
+}
+
+@media screen and (max-width: 800px) {
+  .section {
+    justify-content: center;
+    padding-left: 0;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .section__right {
+    margin-left: 0;
+    width: 20vw;
+    max-height: 20vh;
+    margin-bottom: 4rem;
+  }
+}
+
+.bg-primary {
+  background-color: #001427;
+}
+
+.bg-secondary {
+  background-color: #F0F2EF;
+  color: #001427;
+}
+
+.title {
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.title:hover {
+  cursor: pointer;
+}
+
+.title--primary {
+  font-size: 4rem;
+  border-bottom: 1px solid #A8763E;
+}
+
+.title--primary:hover {
+  font-size: 4rem;
+  opacity: .8;
+  transition: all .4s ease;
+}
+
+.title--secondary {
+  font-size: 2.2rem;
+}
+
+.title--tertiary {
+  font-size: 1.5rem;
+  
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.go-to-top {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+
+
+.go-to-top:hover {
+  opacity: .8;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+
+.see-on-hover {
+  opacity: 0;
+  transition: all .4s ease;
+}
+
+.see-on-hover:hover {
+  opacity: .8;
+}
